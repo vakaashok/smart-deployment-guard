@@ -1,6 +1,6 @@
 {
   "cpu_limit": 80,
-  "memory_free_limit": 90,
+  "memory_free_limit": 20,
   "disk_limit": 90,
   "port": 5000
 }

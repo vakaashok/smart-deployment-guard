@@ -27,15 +27,19 @@ if echo "$result" | grep -q "BLOCKED"; then
     python scripts/self_healing.py
 
     echo "Self-healing completed. Deployment stopped for safety." >> "$LOG_FILE"
-    echo " Self-healing completed. Re-run deployment after checking health."
+    echo "Self-healing completed. Re-run deployment after checking health."
 
     exit 1
 else
     echo "Deployment Allowed!"
-    echo "Deploying application..." >> "$LOG_FILE"
-    echo "Deploying application..."
 
-    sleep 2
+    echo "Building Docker image..." >> "$LOG_FILE"
+    echo "Building Docker image..."
+    docker build -t smart-deployment-guard .
+
+    echo "Running Docker container..." >> "$LOG_FILE"
+    echo "Running Docker container..."
+    docker run --rm smart-deployment-guard
 
     echo "Deployment Successful" >> "$LOG_FILE"
     echo "Deployment Successful"
