@@ -21,6 +21,15 @@ Ensure safe and reliable deployments by validating system health metrics before 
 - Self-Healing Mechanism  
 - Logging System for Audit & Debugging  
 
+## Advanced DevOps Features
+
+- Docker image build and container execution
+- Kubernetes Deployment and NodePort Service
+- Kubernetes liveness and readiness probes
+- Kubernetes pod health validation using Python
+- GitHub Actions CI with Docker validation
+- AI rule-based decision engine for deployment safety
+
 ---
 
 ##  Tech Stack
